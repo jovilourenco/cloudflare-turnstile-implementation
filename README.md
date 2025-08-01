@@ -9,3 +9,5 @@ npm install -g surge
 surge
 
 3. Its okay!
+
+After use, run 'surge teardown <your-hostname>' to disablea surge.
