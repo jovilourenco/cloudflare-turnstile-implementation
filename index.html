@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste - turnstile</title>
+    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js"></script>
+
+</head>
+<body>
+    <h1>Teste de implementação - Cloudflare turnstile</h1>
+
+    <button onclick="turnstileTrigger()">Teste</button>
+
+    <div
+    class="cf-turnstile"
+    data-sitekey="" 
+    data-callback="javascriptCallback"
+    > <!-- COLOCAR O SITE KEY NO data-sitekey -->
+    </div>
+
+    <script>
+        async function turnstileTrigger() {
+            const result = await turnstile.getResponse();
+            console.log(result);
+        }
+
+    </script>
+
+</body>
+</html>
